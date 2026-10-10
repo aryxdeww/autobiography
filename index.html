@@ -1,123 +1,196 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>aryxdeww - Profile Card</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
-    body {
-      background-color: #08080a;
-      color: #f3f4f6;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-    }
-    a, a:visited, a:hover, a:active {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARYXDEWW | Autobiography</title>
+    <!--<link rel="icon" type="image/jpeg" href="assets/azusa_icon.jpg">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        * { box-sizing: border-box; }
+        body {
+        	font-family: 'Roboto', sans-serif;
+        	font-weight: 400;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #1a171d;
+            color: #d4d4d4;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-wrapper {
+            width: 100%;
+            max-width: 750px;
+            background: #252526;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+        }
+
+        .header {
+             display: flex;
+             align-items: center;
+             gap: 20px;
+             border-bottom: 2px solid #935cd8;
+             margin-bottom: 25px;
+             padding-bottom: 15px;
+        }
+        
+        .profile-pic {
+              width: 100px;
+               height: 100px;
+               border-radius: 50%;
+               border: 2px solid #935cd8;
+               object-fit: cover;
+         }
+        
+        .header-text {
+             display: flex;
+             flex-direction: column;
+         }
+                
+		    .aka-text {
+            display: block;
+            font-size: 0.85rem;
+            color: #ffffff;
+            margin-top: -2px;
+            margin-bottom: 5px;
+            font-weight: 400;
+        }
+        
+        .header h1 {
+            margin: 0;
+            color: #935cd8;
+            font-size: 2rem;
+            font-weight: 900; 
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        .header p {
+            margin: 0.5px 0 0;
+            font-size: 0.9rem;
+            color: #FFF;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .h2 {
+            font-size: 1.2rem;
+            color: #935cd8;
+            display: flex;
+            align-items: center;
+        }
+
+        .h2::before {
+            content: "∙ ";
+            margin-right: 10px;
+            color: #FFFFFF;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .skills-list li {
+            background: #333;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            border: 1px solid #444;
+        }
+
+        .exp-item {
+            border-left: 2px solid #444;
+            padding-left: 15px;
+            margin-top: 15px;
+        }
+        
+        .a, a:visited, a:hover, a:active {
               color: #9279B3;
               text-decoration: none;
-    }
-    .card-wrapper {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
-    .profile-card {
-      background-color: #0d0e12;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85);
-      width: 780px;
-      border-radius: 28px;
-      padding: 36px;
-      display: flex;
-      flex-direction: row;
-      gap: 32px;
-      justify-content: space-between;
-      align-items: stretch;
-    }
-    @media (max-width: 800px) { .profile-card { zoom: 0.85; } }
-    @media (max-width: 650px) { .profile-card { zoom: 0.68; } }
-    @media (max-width: 500px) { .profile-card { zoom: 0.52; } }
-    @media (max-width: 380px) { .profile-card { zoom: 0.44; } }
+        }
 
-    .card-left { flex: 1; display: flex; flex-direction: column; justify-content: space-between; min-width: 0; }
-    .card-name { font-weight: 900; color: #fff; text-transform: uppercase; line-height: 1.0; font-size: 4rem; white-space: nowrap; word-break: keep-all; }
-    .card-tagline { color: #9ca3af; font-size: 2.2rem; margin-top: 12px; line-height: 1.4; }
-    .divider { width: 100%; height: 3px; background-color: #a855f7; border-radius: 999px; margin-bottom: 16px; box-shadow: 0 0 12px #a855f7; }
-    .social-links { font-weight: 700; font-size: 0.875rem; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-    .card-right { width: 260px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; flex-shrink: 0; }
-    .img-box { width: 260px; height: 260px; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
-    .img-box img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
-    .action-btn { width: 100%; padding: 14px; border-radius: 16px; background-color: #a855f7; font-weight: 900; color: #000; text-transform: uppercase; border: none; cursor: pointer; font-size: 0.75rem; letter-spacing: 0.05em; transition: 0.2s; }
-    .action-btn:hover { opacity: 0.9; }
-
-    /* Modal Styles */
-    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; padding: 20px; z-index: 100; }
-    .modal-card { background: #12131a; border: 1px solid rgba(255,255,255,0.1); width: 100%; max-width: 500px; border-radius: 20px; padding: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.8); }
-    .modal-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 16px; margin-bottom: 16px; }
-    .modal-user { display: flex; align-items: center; gap: 12px; }
-    .modal-user img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 1px solid #a855f7; }
-    .bio-box { background: rgba(255,255,255,0.05); padding: 16px; border-radius: 12px; font-size: 0.875rem; color: #d1d5db; line-height: 1.6; white-space: pre-line; }
-    .close-btn { background: none; border: none; color: #9ca3af; cursor: pointer; font-size: 20px; }
-  </style>
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #666;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="card-wrapper">
-    <div class="profile-card">
-      <div class="card-left">
-        <div>
-          <h1 class="card-name">aryxdeww</h1>
-          <p class="card-tagline">Linux Enthusiast, Fictophile, Introvert, Asocial.</p>
-        </div>
-        <div style="margin-top: 24px;">
-          <div class="divider"></div>
-          <div class="social-links">
-            <a href="https://aryxdeww.github.io" target="_blank" style="color: #a855f7; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Autobiograph</a> <span style="color: #4b5563;">•</span> <a href="https://www.tiktok.com/@aryxdeww?_r=1&_t=ZS-99udHYxCfht" target="_blank" style="color: #a855f7; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">TikTok</a> <span style="color: #4b5563;">•</span> <a href="https://www.instagram.com/aryxdeww?utm_source=qr&stkn=dTh3enN0dHlubXBm" target="_blank" style="color: #a855f7; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Instagram</a> <span style="color: #4b5563;">•</span> <a href="https://youtube.com/@aryxdeww?si=Kfrx7IfgUK7kCp4w" target="_blank" style="color: #a855f7; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">YouTube</a> <span style="color: #4b5563;">•</span> <a href="https://github.com/aryxdeww" target="_blank" style="color: #a855f7; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">GitHub</a>
-          </div>
-        </div>
-      </div>
-      <div class="card-right">
-        <div class="img-box">
-          <img src="assets/arya-hardpose.png" alt="Profile">
-        </div>
-        <button class="action-btn" onclick="openBioModal()">BIO</button>
-      </div>
-    </div>
-  </div>
+<div class="main-wrapper">
+    <header>
+    	<img src="assets/arya.jpg" alt="Profile Picture" class="profile-pic">
+		<div class="header-text">
+    		<h1>ARYXDEWW</h1>
+    		<span class="aka-text">A.K.A RexDeww / Rexon</span>
+        	<p>Linux Enthusiast, Fictophile, Sloth-a-like, Introvert, and Asocial person.</p>
+		</div>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Hai, aku Arya. aku orang-orangan <a href="https://www.halodoc.com/artikel/pahami-asocial-suka-menyendiri-bukan-antisosial">asosial</a>, salam kenal :D
+        </p>
+    </section>
 
-  <div class="modal-overlay" id="bioModal">
-    <div class="modal-card">
-      <div class="modal-header">
-        <div class="modal-user">
-          <img src="assets/arya-hardpose.png">
-          <div>
-            <h3 style="color:#fff; font-size: 1rem; font-weight:700;">aryxdeww</h3>
-            <p style="color:#a855f7; font-size: 0.75rem;">Linux Enthusiast, Fictophile, Introvert, Asocial.</p>
-          </div>
+    <section id="skills">
+        <h2>Favourite Characters</h2>
+        <ul class="skills-list">
+            <li><a href="https://bluearchive.fandom.com/wiki/Shirasu_Azusa">Shirasu Azusa (Blue Archive)</a></li>
+            <li><a href="https://watchdogs.fandom.com/wiki/Aiden_Pearce">Aiden Pearce (Watch Dogs)</a></li>
+			<li><a href="https://frieren.fandom.com/wiki/Land">Land (Frieren: Beyond Journey's End)</a></li>
+        </ul>
+    </section>
+
+   <section id="skills">
+        <h2>Favourite Songs</h2>
+        <ul class="skills-list">
+            <li>Aden Foyer - Revolve</li>
+            <li>*NSYNC - It's Gonna Be Me</li>
+            <li>Backstreet Boys - Drowning</li>
+            <li>Backstreet Boys - Shape Of My Heart</li>
+            <li>Crayon Case - Gravits</li>
+            <li>Westlife - Nothing's Gonna Change My Love For You</li>
+            <li>Westlife - Evergreen</li>
+            <li>Westlife - Fool Again</li>
+        </ul>
+    </section>
+
+    <!--<section id="experience">
+        <h2>(Maybe) Frequently Asked Questions</h2>
+        <div class="exp-item">
+            <strong>1. "Jadi fictophile itu beneran mas?"</strong>
+            <br><small>sedihnya iya, sampe ada kejadian plot twist aku berhenti jadi fictophile. misal kek beneran nikah di dunia nyata <br>
+            (<a href="https://www.halodoc.com/artikel/mengenal-fictophilia-tanda-tanda-dan-cara-efektif-mengatasinya?srsltid=AfmBOoolIpips6BTThBhJkeAjxuMRv7dHdUBNPdlUXEAsZhSoGJbJ175">Pelajari lebih lanjut tentang "Fictophile"</a>.)</small>
         </div>
-        <button class="close-btn" onclick="closeBioModal()">&times;</button>
-      </div>
-      <p style="font-size:0.75rem; color:#9ca3af; font-weight:700; text-transform:uppercase; margin-bottom:8px;">Bio</p>
-      <div class="bio-box">Arya Dewangga A.K.A Aryok/RexDeww/ARYXDEWW/ Rexon. 
+        <div class="exp-item">
+            <strong>2. "Asal usul jadi Fictophile karena apa mas?"</strong>
+            <br><small>kecintaan banget sama satu karakter fiksi wkwkw, sama karena ga becus aja kalo pacaran irl wkwkw dan takut hal buruk yang pernah kulakuin sebelumnya terjadi karena dulu pernah nyoba pacaran tp mentok LDR dan itupun aku yg nyakitin wkwkw, jadii...daripada hal yang sama terulang kembali, aku memilih jadi Fictophile dsn perlahan merubah dan memperbaiki sifat buruk ku ini :D</small>
+        </div>
+    </section>-->
 
-Aku antusias di bidang komputer terutama kalo lagi pada bahas Linux juga seorang <a href="https://www.halodoc.com/artikel/mengenal-fictophilia-tanda-tanda-dan-cara-efektif-mengatasinya?srsltid=AfmBOoolIpips6BTThBhJkeAjxuMRv7dHdUBNPdlUXEAsZhSoGJbJ175">fiktofilia</a>. Oh iya aku orangnya <a href="https://www.halodoc.com/artikel/introvert-ciri-kekuatan-dan-cara-hadapi-dunia">introvert</a>, dan <a href="https://www.halodoc.com/artikel/pahami-asocial-suka-menyendiri-bukan-antisosial">asosial</a> karena emang ga terbiasa di publik dan aku lebih senang di kamar mainan komputer, dan itu menjelaskan kenapa aku antusias di bidang komputer.</div>
-      <div style="margin-top: 20px; text-align: right;">
-        <button onclick="closeBioModal()" style="padding: 8px 16px; border-radius: 8px; background: rgba(255,255,255,0.1); color: #fff; border: none; cursor: pointer; font-size: 0.75rem;">Tutup</button>
-      </div>
-    </div>
-  </div>
+    <footer>
+        btw last edit di tanggal 7 Mei 2026 di jam 19:45<br>kamu udah baca sampe sini? anjay keren...<br>keknya kamu cocok jadi pengulik kisahku <a href="diary/01-index.html">disini</a>.
+    </footer>
+</div>
 
-  <script>
-    function openBioModal() { document.getElementById('bioModal').style.display = 'flex'; }
-    function closeBioModal() { document.getElementById('bioModal').style.display = 'none'; }
-  </script>
 </body>
 </html>
