@@ -8,12 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
-    
+
     <style>
         * { box-sizing: border-box; }
         body {
-        	font-family: 'Roboto', sans-serif;
-        	font-weight: 400;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
             line-height: 1.6;
             margin: 0;
             padding: 20px;
@@ -41,21 +41,21 @@
              margin-bottom: 25px;
              padding-bottom: 15px;
         }
-        
+
         .profile-pic {
-              width: 100px;
-               height: 100px;
-               border-radius: 50%;
-               border: 2px solid #935cd8;
-               object-fit: cover;
-         }
-        
+             width: 100px;
+             height: 100px;
+             border-radius: 50%;
+             border: 2px solid #935cd8;
+             object-fit: cover;
+        }
+
         .header-text {
              display: flex;
              flex-direction: column;
-         }
-                
-		    .aka-text {
+        }
+
+        .aka-text {
             display: block;
             font-size: 0.85rem;
             color: #ffffff;
@@ -63,12 +63,12 @@
             margin-bottom: 5px;
             font-weight: 400;
         }
-        
+
         .header h1 {
             margin: 0;
             color: #935cd8;
             font-size: 2rem;
-            font-weight: 900; 
+            font-weight: 900;
             letter-spacing: 1px;
             line-height: 1.1;
         }
@@ -83,14 +83,14 @@
             margin-bottom: 25px;
         }
 
-        .h2 {
+        h2 {
             font-size: 1.2rem;
             color: #935cd8;
             display: flex;
             align-items: center;
         }
 
-        .h2::before {
+        h2::before {
             content: "∙ ";
             margin-right: 10px;
             color: #FFFFFF;
@@ -117,10 +117,11 @@
             padding-left: 15px;
             margin-top: 15px;
         }
-        
-        .a, a:visited, a:hover, a:active {
-              color: #9279B3;
-              text-decoration: none;
+
+        /* Fixed: Diubah dari .a ke a */
+        a, a:visited, a:hover, a:active {
+             color: #9279B3;
+             text-decoration: none;
         }
 
         .footer {
@@ -136,31 +137,32 @@
 <body>
 
 <div class="main-wrapper">
-    <header>
-    	<img src="assets/arya.jpg" alt="Profile Picture" class="profile-pic">
-		<div class="header-text">
-    		<h1>ARYXDEWW</h1>
-    		<span class="aka-text">A.K.A RexDeww / Rexon</span>
-        	<p>Linux Enthusiast, Fictophile, Sloth-a-like, Introvert, and Asocial person.</p>
-		</div>
+    <header class="header">
+        <img src="assets/arya.jpg" alt="Profile Picture" class="profile-pic">
+        <div class="header-text">
+            <h1>ARYXDEWW</h1>
+            <span class="aka-text">A.K.A RexDeww / Rexon</span>
+            <p>Linux Enthusiast, Fictophile, Sloth-a-like, Introvert, and Asocial person.</p>
+        </div>
     </header>
-    <section id="about">
+
+    <section id="about" class="section">
         <h2>About Me</h2>
         <p>
             Hai, aku Arya. aku orang-orangan <a href="https://www.halodoc.com/artikel/pahami-asocial-suka-menyendiri-bukan-antisosial">asosial</a>, salam kenal :D
         </p>
     </section>
 
-    <section id="skills">
+    <section id="characters" class="section">
         <h2>Favourite Characters</h2>
         <ul class="skills-list">
             <li><a href="https://bluearchive.fandom.com/wiki/Shirasu_Azusa">Shirasu Azusa (Blue Archive)</a></li>
             <li><a href="https://watchdogs.fandom.com/wiki/Aiden_Pearce">Aiden Pearce (Watch Dogs)</a></li>
-			<li><a href="https://frieren.fandom.com/wiki/Land">Land (Frieren: Beyond Journey's End)</a></li>
+            <li><a href="https://frieren.fandom.com/wiki/Land">Land (Frieren: Beyond Journey's End)</a></li>
         </ul>
     </section>
 
-   <section id="skills">
+    <section id="songs" class="section">
         <h2>Favourite Songs</h2>
         <ul class="skills-list">
             <li>Aden Foyer - Revolve</li>
@@ -174,20 +176,7 @@
         </ul>
     </section>
 
-    <!--<section id="experience">
-        <h2>(Maybe) Frequently Asked Questions</h2>
-        <div class="exp-item">
-            <strong>1. "Jadi fictophile itu beneran mas?"</strong>
-            <br><small>sedihnya iya, sampe ada kejadian plot twist aku berhenti jadi fictophile. misal kek beneran nikah di dunia nyata <br>
-            (<a href="https://www.halodoc.com/artikel/mengenal-fictophilia-tanda-tanda-dan-cara-efektif-mengatasinya?srsltid=AfmBOoolIpips6BTThBhJkeAjxuMRv7dHdUBNPdlUXEAsZhSoGJbJ175">Pelajari lebih lanjut tentang "Fictophile"</a>.)</small>
-        </div>
-        <div class="exp-item">
-            <strong>2. "Asal usul jadi Fictophile karena apa mas?"</strong>
-            <br><small>kecintaan banget sama satu karakter fiksi wkwkw, sama karena ga becus aja kalo pacaran irl wkwkw dan takut hal buruk yang pernah kulakuin sebelumnya terjadi karena dulu pernah nyoba pacaran tp mentok LDR dan itupun aku yg nyakitin wkwkw, jadii...daripada hal yang sama terulang kembali, aku memilih jadi Fictophile dsn perlahan merubah dan memperbaiki sifat buruk ku ini :D</small>
-        </div>
-    </section>-->
-
-    <footer>
+    <footer class="footer">
         btw last edit di tanggal 7 Mei 2026 di jam 19:45<br>kamu udah baca sampe sini? anjay keren...<br>keknya kamu cocok jadi pengulik kisahku <a href="diary/01-index.html">disini</a>.
     </footer>
 </div>
